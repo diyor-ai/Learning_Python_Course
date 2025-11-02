@@ -29,3 +29,17 @@ def greeting():
 
 #print(greeting())
 greeting()
+
+def say_hello(fname):
+    print(f"Hello Mr{fname}")
+
+hello = say_hello("Diyor")
+print(hello)
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(4))

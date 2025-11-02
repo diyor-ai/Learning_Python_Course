@@ -37,7 +37,7 @@ library = {
     }, "book5": {
         "title": "Shumbola",
         "pages": 429,
-        "genres": ["ROMAN", ],
+        "genres": ["ROMAN"],
         "available": bool(False),
         "publish_date": (1988, 3, 15),
     }
@@ -55,7 +55,7 @@ for x in library.items():
 new_key = str(input("Please write new book's key name: "))
 new_title = str(input("Enter book name: "))
 new_pages = int(input("Page of book: "))
-new_genres = (input("Enter genres of book: "))
+new_genres = input("Enter genres of book: ").split(", ")
 
 new_book = {
     "title": new_title,
