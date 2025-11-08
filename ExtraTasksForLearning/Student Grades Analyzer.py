@@ -12,21 +12,17 @@ students = {
     "Sattor": [64, 34, 45]
 }
 
+avarages = {}
 
 for key, value in students.items():
-    avarage = round(sum(value) / len(value), 2)
-    print(f"{key} avarage: {avarage}")
+    avg = sum(value) / len(value)
+    avarages[key] = avg
+    print(f"{key} avarage: {avg:.2f}")
 
 
-for value in students.values():
+top_student = max(avarages, key=avarages.get)
 
-    avarage1 = [sum(value) / len(value)]
+print(f"\nTop student: {top_student} ({avarages[top_student]:.2f})")
 
-    new_score = max(avarage1)
-
-    print(f"max score {new_score}")
-
-
-
-
-
+if avarages > 50:
+    print(len(avarages))
