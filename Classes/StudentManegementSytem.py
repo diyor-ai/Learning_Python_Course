@@ -31,4 +31,3 @@ print("\n--- Spesific student ---")
 print(f"{student1.name} ==>> Avarage Grade: {student1.average_grade():.2f}")
 
 
-
