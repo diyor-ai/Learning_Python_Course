@@ -37,6 +37,17 @@ for row in range(len(matrix)):
             odd_number.append(matrix[row][col])
 print(f"Odd numbers are {odd_number}")
 
-for row in range(len(matrix)):
-    for col in range(len(matrix[row])):
-        print(col)
+for row in matrix:
+    total = 0
+    for x in row:
+        total += x
+    print(f"Row {row} sum is {total}")
+
+max_val = matrix[0][0]
+max_pos = matrix[0][0]
+
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        if matrix[i][j] > max_val:
+            print(f"Row {i} sum is {matrix[i][j]}")
+            max_val = matrix[i][j]
