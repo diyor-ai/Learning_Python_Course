@@ -14,7 +14,7 @@ for student in students:
     for grade in student[1]:
         total += grade
     average = total / len(student[1])
-    students_results.append([student[0], round(average, 2)])
+    students_results.append((student[0], round(average, 2)))
     print(f"{student[0]} average: {average:.2f}")
 
 for student in students_results:
