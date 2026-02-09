@@ -42,3 +42,9 @@ print(f"Only Tali Qiziqishlar: {only_Tali}")
 all_interests = Sali | Vali | Tali
 
 print(f"All Qiziqishlar: {all_interests}")
+
+at_least_two = (Sali & Vali) | (Sali & Tali) | (Vali & Tali)
+only_one = all_interests - at_least_two
+print("At least two users:", at_least_two)
+print("Only one user:", only_one)
+
