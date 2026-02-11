@@ -27,3 +27,9 @@ for key, value in users.items():
         print(f"Status: Active")
     else:
         print(f"Status: Inactive")
+
+
+    if value['active'] is True:
+        print(f"Status: Active")
+    else:
+        print(f"Status: Inactive")
