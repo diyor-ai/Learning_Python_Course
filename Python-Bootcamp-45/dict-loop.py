@@ -28,9 +28,8 @@ for key, value in users.items():
     else:
         print(f"Status: Inactive")
 
-#Second version
+# Second version
 print("-" * 64)
-
 
 for user_id, info in users.items():
     print(f"\nUSER: {user_id}")
@@ -46,3 +45,21 @@ for user_id, info in users.items():
             print(f"{key.upper()}: {value}")
 
     print("-" * 16)
+
+# Create the dictionary
+car = {"brand": "Ford", "model": "Mustang", "year": 2024}
+
+# Print the model
+print(car["model"])
+
+# Change the year to 2025
+car["year"] = 2025
+
+# Add a color key
+car["color"] = "red"
+
+# Remove the brand key
+car.pop("brand")
+
+# Print the dictionary
+print(car)
