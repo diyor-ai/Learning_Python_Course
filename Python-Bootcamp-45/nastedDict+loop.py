@@ -13,3 +13,12 @@ for key, value in store.items():
     stock = value['stock']
     for val in value.items():
         print(stock)
+
+
+university = {
+    "CS": {
+        "year1": {
+            "students": 50
+        }
+    }
+}
