@@ -1,7 +1,7 @@
 store = {
     "electronics": {
         "phone": {"price": 1000, "stock": 5},
-        "laptop": {"price": 2000, "stock": 3}
+        "laptop": {"price": 200, "stock": 3}
     },
     "clothes": {
         "shirt": {"price": 50, "stock": 20}
@@ -14,15 +14,16 @@ for stocks in store.values():
         total_stock += value["stock"]
 print(f"Total stock: {total_stock}")
 
-# find most expensive product
+max_price = 0
+most_expensive = None
 
-for value in store.values():
-    for x in value.values():
-        max_value = x["price"]
-        if x["price"] > max_value:
-            max_value = x["price"]
-    print(f"Max price: {max_value}")
+for category in store.values():
+    for product_name, info in category.items():
+        if info["price"] > max_price:
+            max_price = info["price"]
+            most_expensive = product_name
 
+print("Most expensive:", most_expensive, max_price)
 
 for stocks in store.values():
     for key, value in stocks.items():
