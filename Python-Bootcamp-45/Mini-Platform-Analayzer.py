@@ -116,3 +116,12 @@ for x in readers:
     if x[1] > top_reader[1]:
         top_reader = x
 print(f"Top reader: {top_reader[0]} ({top_reader[1]} pages)")
+
+"""
+python -> ['Ali', 'Vali']
+ai -> ['Ali', 'Sami']
+football -> ['Ali']
+gaming -> ['Vali']
+music -> ['Vali', 'Sami']
+
+"""
