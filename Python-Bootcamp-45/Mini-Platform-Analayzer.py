@@ -125,3 +125,18 @@ gaming -> ['Vali']
 music -> ['Vali', 'Sami']
 
 """
+
+interest_map = {}
+
+for user in platform.values():
+    name = user["name"]
+
+    for interest in user["interests"]:
+        if interest not in interest_map:
+            interest_map[interest] = []
+
+        interest_map[interest].append(name)
+
+# Output
+for interest, users in interest_map.items():
+    print(f"{interest} -> {users}")
