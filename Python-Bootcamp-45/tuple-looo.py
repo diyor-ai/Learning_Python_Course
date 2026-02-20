@@ -23,16 +23,11 @@ for student in students_results:
     else:
         print(f"{student[0]} : Failed")
 
-
-
 top_student = students_results[0]
 for x in students_results:
     if x[1] > top_student[1]:
         top_student = x
 print(f"Top student: {top_student[0]} ({top_student[1]})")
-
-
-
 
 failed_studets = []
 passed_students = []
