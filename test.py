@@ -1,7 +1,7 @@
 data = [
     "football", "music", "reading", "music",
-    "coding","cleaning", "hokkey", "panda",
-    "panda", "panda", "panda","coding",
+    "coding", "cleaning", "hokkey", "panda",
+    "panda", "panda", "panda", "coding",
     "football", "gaming", "coding", "cleaning",
     "selling", "enjoying", "kidding", "joking"
 ]
