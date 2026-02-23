@@ -109,3 +109,4 @@ for direction, info in academy.items():
 
 for course, info in course_type.items():
     print(f"{course} -> {info['student']}")
+
