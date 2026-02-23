@@ -49,6 +49,7 @@ for direction in academy.values():
             student_stats[student]["total_score"] += sum(info["scores"])
             student_stats[student]["score_count"] += len(info["scores"])
 
+students_rate = []
 for student, data in student_stats.items():
     average = data["total_score"] / data["score_count"]
     print(student)
@@ -56,6 +57,7 @@ for student, data in student_stats.items():
     print("Total score:", data["total_score"])
     print("Average:", round(average, 2))
     print("-------------")
+    students_rate.append([student, round(average, 2)])
 
 """
 Python
@@ -65,10 +67,45 @@ Completed: 1
 
 course_stats = {}
 for direction in academy.values():
-    for course in direction.values():
-        for student, info in course.items():
-            if student not in course_stats:
-                course_stats[student] = {
-                    "students": 0,
-                    "completed": False,
-                }
+    for course, info in direction.items():
+        if course not in course_stats:
+            course_stats[course] = {
+                "students": 0,
+                "completed": 0,
+            }
+        for student, infoes in info.items():
+            course_stats[course]["students"] += 1
+            if infoes["completed"]:
+                course_stats[course]["completed"] += 1
+
+for course, data in course_stats.items():
+    print(course)
+    print("Students:", data["students"])
+    print("Completed:", data["completed"])
+    print("__" * 8)
+
+# Top student: Sami (92.33)
+top_student = students_rate[0]
+
+for student in students_rate:
+    if student[1] > top_student[1]:
+        top_student = student
+print(f"Top student: {top_student[0]} ({top_student[1]})")
+print("__" * 8)
+
+"""
+Backend -> 2 students
+Frontend -> 1 student
+"""
+
+course_type = {}
+for direction, info in academy.items():
+    course_type[direction] = {
+        "student": 0
+    }
+    for course in info.values():
+        for val in course.values():
+            course_type[direction]["student"] += 1
+
+for course, info in course_type.items():
+    print(f"{course} -> {info['student']}")
