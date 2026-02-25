@@ -77,5 +77,3 @@ for employee in top_performe:
     if employee[1] > top_performer[1]:
         top_performer = employee
 print(f"Top performer: {top_performer[0]} ({top_performer[1]})")
-
-
